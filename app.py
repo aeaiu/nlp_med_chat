@@ -10,7 +10,7 @@ app = Flask(__name__)
 #  the SQLStorageAdapter adapter will be used automatically.
 
 medical_bot = ChatBot("Chatterbot", storage_adapter="chatterbot.storage.SQLStorageAdapter",
-                    logic_adapters=["chatterbot.logic.BestMatch"]) #,database_uri='sqlite:///database.sqlite3'
+                    logic_adapters=["chatterbot.logic.BestMatch"]) ,database_uri='sqlite:///database.sqlite3'
 #  ,preprocessors=['chatterbot.preprocessors.clean_whitespace']
 
 
