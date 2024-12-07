@@ -33,7 +33,7 @@ medical_bot = ChatBot("Chatterbot", storage_adapter="chatterbot.storage.SQLStora
 
 trainer = ChatterBotCorpusTrainer(medical_bot)
 #trainer = ListTrainer(medical_bot)
-trainer.train("med_conversations")
+#trainer.train("med_conversations")
 
 @app.route("/")
 def home():
