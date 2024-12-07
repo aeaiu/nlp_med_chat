@@ -10,7 +10,9 @@ app = Flask(__name__)
 #  the SQLStorageAdapter adapter will be used automatically.
 
 medical_bot = ChatBot("Chatterbot", storage_adapter="chatterbot.storage.SQLStorageAdapter",
-                    logic_adapters=["chatterbot.logic.BestMatch"] ,database_uri='sqlite:///database.sqlite3')
+                    logic_adapters=["chatterbot.logic.BestMatch"] 
+                      #,database_uri='sqlite:///database.sqlite3'
+                     )
 #  ,preprocessors=['chatterbot.preprocessors.clean_whitespace']
 
 
@@ -29,9 +31,9 @@ medical_bot = ChatBot("Chatterbot", storage_adapter="chatterbot.storage.SQLStora
 # https://chatterbot.readthedocs.io/en/stable/corpus.html
 # https://chatterbot.readthedocs.io/en/stable/django/wsgi.html
 
-#trainer = ChatterBotCorpusTrainer(medical_bot)
+trainer = ChatterBotCorpusTrainer(medical_bot)
 #trainer = ListTrainer(medical_bot)
-#trainer.train("med_conversations")
+trainer.train("med_conversations")
 
 @app.route("/")
 def home():
