@@ -1,0 +1,8 @@
+# Used by pip to install required python packages
+# Usag
+
+Flask
+chatterbot2
+chatterbot-corpus
+SQLAlchemy
+spacy
