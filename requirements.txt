@@ -3,6 +3,5 @@
 
 Flask
 chatterbot2
-chatterbot-corpus
 SQLAlchemy
 spacy
